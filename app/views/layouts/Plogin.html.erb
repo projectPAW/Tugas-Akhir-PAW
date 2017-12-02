@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectPAW</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+	<%= yield %>
+	
+	<!--footer-->
+  	<div class="footer">
+		<div class="nav-icon">
+			<p class="follow">Follow Us</p>
+			<a href="#"><img class="icon" <%= image_tag 'facebook.png'%></a>
+			<a href="#"><img class="icon" <%= image_tag 'instagram.png' %></a>
+			<a href="#"><img class="icon" <%= image_tag 'twitter.png' %></a>
+			<a href="#"><img class="icon"<%= image_tag 'youtube.png' %></a>
+			<a href="#"><img class="icon"<%= image_tag 'plus.png' %></a><br/><br/>
+			<p class="footer">Cisco Networking Academy, a Cisco Corporate Social Responsibility program, is an IT skills and career building program available to learning institutions and individuals worldwide.</p><br/>
+			<p>&copy;2017 Granada Project</p>
+		</div>
+		<div class="clear"></div>
+
+		<div class="nav-foot">
+			<ul>
+			   <li><a href="home">Home</a></li>
+			   <li><a href="#">About</a></li>
+			   <li><a href="#">Contact Us</a></li>
+			   <li><a href="#">Sitemap</a></li>
+			   <li><a href="#">Privacy Policy</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+  </body>
+</html>

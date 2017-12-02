@@ -1,0 +1,219 @@
+<% flash.each do |type, message| %>
+  <p class="alert alert-danger alert-dismissable fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Error!</strong><%=message%></p>
+<%end%>
+
+<!--header-->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background:#4da6ff">
+    <div class="navbar-brand" style="margin-right: 10%;">Ilearning UN</div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" href="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Project</a>
+            </li>
+            <li class="nav-item nav-right">
+              <a class="nav-link" href="#">Contact</a>
+            </li>        
+        </ul>
+
+         <ul class="navbar-nav" style="margin-right: 5%">
+          <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#myModal" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="daftar">Daftar</a>
+            </li>
+        </ul>
+      </div>  
+
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header" style="height:50px">                  
+                <h5 class="modal-title">Login learning</h5>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              
+              <!-- Modal body -->
+              <div class="modal-body">  
+             
+                <%=form_tag do %>
+                  <div class="form-group">
+                    <%= text_field_tag :username, nil, placeholder: 'username', class: 'form-control', required: true %>
+                  </div>
+                  <div class="form-group">
+                    <%= password_field_tag :password, nil, placeholder: '**********', class: 'form-control', required: true%>
+                  </div>
+
+                  <div class="form-group">
+                    <%= submit_tag "Masuk", class:"btn btn-block btn-custom-green" %>
+                  </div>
+                <%end%>
+                
+                <div class="text-center">
+                        <a href="daftar">Daftar</a>
+                    </div>
+                    <div class="text-center">
+                      <a href="#">Lupa Password</a>
+                    </div>
+
+              </div>
+            </div>
+        </div>
+      </div>
+  </nav>
+
+<div class="content">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      	<ul class="carousel-indicators">
+    	    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    	    <li data-target="#demo" data-slide-to="1"></li>
+    	    <li data-target="#demo" data-slide-to="2"></li>
+      	</ul>
+      	<div class="carousel-inner">
+    	    <div class="carousel-item active">
+    	    <img alt="Los Angeles" width="1100" height="500" <%= image_tag("exam.png") %>
+    	      	<div class="carousel-caption">
+    		        <div class="text">
+    			   		<h1>Selamat Datang di i-UN</h1>      
+    			   		<p>Cara mudah untuk melakukan pembelajaran serta simulasi Ujian Nasional Sekolah Menengah Atas (SMA)</p>
+    			   	</div>
+    	    	</div>   
+        	</div>
+        
+        <div class="carousel-item">
+          	<img alt="Chicago" width="1100" height="500" style="-webkit-filter: opacity(70%); filter: opacity(70%);" <%= image_tag("3.jpg") %>
+          		<div class="carousel-caption">
+            		<div class="text">
+    			   		<h1>Kemudahan Akses</h1>      
+    			   		<p>Bergabung bersama kami dan segera nikmati kemudahan akses untuk berlatih</p>
+    			   	</div>
+          	</div>   
+        </div>
+        
+        <div class="carousel-item">
+          	<img alt="New York" width="1100" height="500" style="-webkit-filter: opacity(70%); filter: opacity(70%);" <%= image_tag("2.1.jpg") %>
+          		<div class="carousel-caption">
+            		<div class="text">
+    			   		<h1>Materi Belajar</h1>      
+    			   		<p>Ketersedian materi untuk pembelajaran yang cukup beragam</p>
+    			   	</div>
+          		</div>   
+        	</div>
+      	</div>
+      
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+    
+    <div class="container" style="padding: 50px;">
+      <div class="con1">
+        <img class="c1" <%= image_tag '1.png'%>
+        <div class="t">
+          <h3>Mempermudah Untuk Mempersiapkan Diri</h3>
+          <p>Dengan berbagai macam fitur yang ada, diharapkan dapat membantu Siswa dalam melakukan persiapan untuk menjalani Ujian Akhir Nasional (UAN). Karena pengasahan kemampuan Siswa dapat dilakukan kapanpun dan dimanapun.
+          </p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr>
+
+      <div class="con2">
+        <img class="c2" <%= image_tag '2.png'%>
+        
+        <div class="tt">
+          <h3>Tersedia Berbagai Materi Sebagai Media Pembelajaran</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr>
+
+      <div class="con3">
+        <img class="c3" <%= image_tag '3.png'%>
+        <div class="t">
+          <h3>Memantau Perkembangan dan Kesiapan Siswa</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr>
+
+      <div class="con4">
+        <img class="c4" <%= image_tag '4.png'%>
+        <div class="tt">
+          <h3>Simulasi Pengerjaan Soal</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <hr>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class='section'>
+      <div id="icon-wrapper">
+        <a href="/proses">
+          <div class="icons">
+            <div class="icon-slide-container">
+              <img class="slide-icon"  alt="Proses Belajar" height="100" <%= image_tag 'slide-1.jpg'%>
+            </div>
+          </div>
+        </a>
+
+      <a href="/materi">
+      <div class="icons2">
+        <div class="icon-slide-container">
+          <img class="slide-icon"  alt="Materi Pembelajaran" height="100" <%= image_tag 'slide-2.jpg'%>
+          </div>
+        </div>
+      </a>
+      
+      <a href="/monitoring">
+        <div class="icons3">
+          <div class="icon-slide-container">
+            <img class="slide-icon"  alt="Monitoring" height="100" <%= image_tag 'slide-3.jpg'%>
+            </div>
+          </div>
+        </a>
+        
+        <a href="/join">
+          <div class="icons4">
+            <div class="icon-slide-container">
+              <img class="slide-icon"  alt="Question" height="100" <%= image_tag 'slide-4.jpg'%>
+              </div>
+            </div>
+          </a>
+        </div>
+    </div>
+  </div>
+
+    <div class="clear"></div>

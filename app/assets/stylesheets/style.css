@@ -1,0 +1,391 @@
+html, body{
+	height: 100%;
+}
+
+.clear{
+	float: none;
+	clear: both;
+}
+
+.carousel-inner img {
+	width: 100%;
+	height: 620px;
+}
+
+.text {
+    position: relative;
+    top: -200px;
+    color: #ffffff;
+    }
+
+.t {
+		margin-top: 30px;
+  		width: 700px;
+  	}
+
+.tt {
+		float: right;
+		margin-top: 30px;
+  		width: 700px;
+  	}
+
+.formDaftar {
+	margin :3%; 
+	width: 60%;
+}
+
+/*------------------------- Responsive -----------------------------*/
+@media only screen and (max-width: 1300px) {
+  #icon-wrapper{
+		width:100%;
+		float:left;
+		height:170px;
+	}
+  .icon-slide-container {
+		height: 200px;
+		overflow: hidden;
+		text-align: left;
+		position: absolute;
+		float: left;
+		width: 200px;
+		left: 50%;
+		margin-left: -100px;
+	}
+  .slide-icon {
+		width: 200px;
+		height: auto;
+		position: absolute;
+		margin-top: -200px;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+  #home-social-container{
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+		padding: 0;
+		float: left;
+		left: 0;
+	}
+}
+
+@media only screen and (max-width: 840px) {
+  #icon-wrapper{
+		width:100%;
+		float:left;
+		height:650px;
+		padding: 50px;
+	}
+	
+	.icon-slide-container {
+		height: 300px;
+		overflow: hidden;
+		text-align: left;
+		position: absolute;
+		float: left;
+		width: 300px;
+		left: 50%;
+		margin-left: -150px;
+	}
+	
+	.slide-icon {
+		width: 300px;
+		height: auto;
+		position: absolute;
+		margin-top: -300px;
+	}	
+	.icons {
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+	.icons2 {
+		width: 50%;
+		float: left;
+		position: relative;
+		margin-left: 50%;
+	}
+	.icons3 {
+		width: 50%;
+		float: left;
+		position: relative;
+		margin-left: 0%;
+		margin-top: 350px;
+	}
+	.icons4 {
+		width: 50%;
+		float: left;
+		position: relative;
+		margin-left: 50%;
+	}
+
+	.c1, .c2, .c3, .c4 {
+		width: 150px;
+		float: none;
+	}
+
+	.con1, .con2, .con3, .con4 {
+		text-align: center;
+		clear: both;
+		float: none;
+	}
+
+	.t, .tt {
+		float: none;
+		text-align: center;
+		width: 100%;
+		clear: both;
+	}
+}
+                        
+@media only screen and (max-width: 650px) {
+	#icon-wrapper {
+		height: 400px;
+		padding: 50px;
+	}
+	#section{
+		width: 90%;
+		padding-left:5%;
+		padding-right:5%;
+	}
+	.slide-icon {
+		width: 200px;
+		height: auto;
+		position: absolute;
+		margin-top: -200px;
+	}
+	.icon-slide-container {
+		height: 200px;
+		width: 200px;
+		left: 50%;
+		margin-left: -100px;
+	}
+	.icons3 {
+		width: 50%;
+		position: relative;
+		margin-left: 0%;
+		margin-top: 230px;
+	}
+}
+                                  
+@media only screen and (max-width: 570px) {
+	#icon-wrapper {
+		height: 300px;
+		padding: 50px;
+	}
+	.slide-icon {
+		width: 150px;
+		height: auto;
+		position: absolute;
+		margin-top: -150px;
+	}
+	.icon-slide-container {
+		height: 150px;
+		width: 150px;
+		left: 50%;
+		margin-left: -75px;
+	}
+	.icons3 {
+		width: 50%;
+		float: left;
+		margin-left: 0%;
+		margin-top: 190px;
+	}	
+}
+
+
+@media only screen and (max-width: 760px) {
+	.carousel-inner img {
+		width: 100%;
+		height: 100%;
+	}
+	.text{
+		top: -10px;
+	}
+
+	.text h1 {
+	    font-size: 24px;
+  	}
+
+  	p {
+	    font-size: 14px;
+  	}
+}
+
+@media only screen and (max-width: 480px) {
+	.text{
+		top: 25px;
+	}
+
+	.text h1 {
+	    font-size: 14px;
+  	}
+
+  	p {
+	    font-size: 10px;
+  	}
+
+  	.formDaftar .form-group {
+		width: 230px;
+	}
+
+	.icon {
+		width: 20px;
+		height: 20px;
+	}
+}
+/*------------------------- End Responsive -----------------------------*/
+
+
+
+/*---------Content Index-----------*/
+body{
+  background:#eeeeee;
+}
+
+.c1, .c3 {
+	float: right;
+}
+
+.carousel-item {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.section{
+		float: left;
+		padding-top: 50px;
+		padding-bottom: 100px;
+		width: 100%;
+		padding-left:0;
+		padding-right:0;
+}
+
+#icon-wrapper{
+	width:100%;
+	float:left;
+	height:300px;
+}
+
+.icons {
+	width:25%;
+	float:left;
+	position:relative;
+}
+.icons2 {
+	width:25%;
+	float:left;
+	position:relative;
+	margin-left:25%;
+}
+.icons3 {
+	width:25%;
+	float:left;
+	position:relative;
+	margin-left:50%;
+}
+.icons4 {
+	width:25%;
+	float:left;
+	position:relative;
+	margin-left:75%;
+}
+
+.icon-slide-container{
+	height:300px;
+	overflow:hidden;
+	text-align: left;
+	position: absolute;
+	float: left;
+	width: 300px;
+	left: 50%;
+	margin-left: -150px;
+}
+
+.slide-icon{
+  width:300px;
+  height:auto;
+  position:absolute;
+  margin-top:-300px;
+  -webkit-transition:.4s ease;
+  -moz-transition:.4s ease;
+  -ms-transition:.4s ease;
+  -o-transition:.4s ease;
+  transition:.4 ease;
+}
+	
+.slide-icon:hover{
+  position:absolute;
+  margin-top:0;
+}
+
+
+/*--------- End Content-----------*/
+
+/*---------Footer------*/
+.footer{
+	background: #ebebeb;
+}
+
+.nav-foot ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-foot li {
+    float: left;
+}
+
+.nav-foot a {
+  display: block;
+  margin-bottom: 20px;
+  color: #000000;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.nav-foot a:hover {
+  text-decoration: none;
+}
+
+.nav-icon {
+	width: 400px;
+	padding: 20px;
+	text-align: right;
+	float: right;
+}
+
+.footer p {
+	font-size: 12px;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------Dashboard---------------------*/
+.dashboard {
+	padding: 20px;
+}
+
+.dashboard ul {
+	margin: 20px;
+	list-style-type: none;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.dashboard li {
+    float: left;
+}
+
+.dashboard a {
+	margin-bottom: 20px;
+	color: #000000;
+	padding: 50px;
+}
+/*------------------------Materi----------------------*/
+aside {
+	width: 20%;
+	margin: 10px;
+}
+
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectPAW</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <body>
+  <!--header-->
+	<nav class="navbar navbar-expand-sm bg-light navbar-light justify-content-between">
+		<div class="navbar-header">
+      		<a class="navbar-brand">Dashboard</a>
+    	</div>
+		    <ul class="navbar-nav" style="margin-right: 5%">
+		   		<!--session username -->
+		      	<% if user = current_user %>
+					<li class="nav-item">	
+					      <li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+					        <%= user.username %>
+					      </a>
+					      <div class="dropdown-menu">
+					        <a class="dropdown-item" href="#">Profile</a>
+					        <a class="dropdown-item" href="#">Setting</a>
+					        <%= link_to "Logout", logout_path, method: :delete, class:"dropdown-item" %>
+					      </div>
+					    </li>
+			      	</li>
+			    <% else %>
+		        	<!--<a href="login" class="nav-link"> </a> -->
+			    <%end%>
+		    <!--end session username -->
+		    </ul>
+	  	</div>  
+	</nav>
+	<!--end header-->
+    
+    <%= yield %>
+
+    <!--footer-->
+	<div class="footer">
+		<div class="nav-icon">
+			<p class="follow">Follow Us</p>
+			<a href="#"><img class="icon" <%= image_tag 'facebook.png'%></a>
+			<a href="#"><img class="icon" <%= image_tag 'instagram.png' %></a>
+			<a href="#"><img class="icon" <%= image_tag 'twitter.png' %></a>
+			<a href="#"><img class="icon"<%= image_tag 'youtube.png' %></a>
+			<a href="#"><img class="icon"<%= image_tag 'plus.png' %></a><br/><br/>
+			<p class="footer">Cisco Networking Academy, a Cisco Corporate Social Responsibility program, is an IT skills and career building program available to learning institutions and individuals worldwide.</p><br/>
+			<p>&copy;2017 Granada Project</p>
+		</div>
+		<div class="clear"></div>
+
+		<div class="nav-foot">
+			<ul>
+			   <li><a href="/home">Home</a></li>
+			   <li><a href="#">About</a></li>
+			   <li><a href="#">Contact Us</a></li>
+			   <li><a href="#">Sitemap</a></li>
+			   <li><a href="#">Privacy Policy</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--end footer-->
+  </body>
+</html>

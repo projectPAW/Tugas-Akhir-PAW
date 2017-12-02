@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  noinduk: 1
+  nama: MyString
+  jenkel: MyString
+  kelas: MyString
+  subkelas: MyString
+  jurusan: MyString
+  sekolah: MyString
+
+two:
+  noinduk: 1
+  nama: MyString
+  jenkel: MyString
+  kelas: MyString
+  subkelas: MyString
+  jurusan: MyString
+  sekolah: MyString

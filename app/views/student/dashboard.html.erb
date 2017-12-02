@@ -1,0 +1,26 @@
+<div class="container">
+	<% if user = current_user %>
+	<div class="dashboard">
+		<ul>
+		    <li><a href="/book"><img alt="library" <%= image_tag 'library.png'%>
+		    	<figcaption align="center"><h6>Materi</h6></figcaption></a></li>
+		    <li><a href="/simulasi"><img alt="simulation" <%= image_tag 'simulation.png'%>
+		    	<figcaption align="center"><h6>Simulasi Ujian</h6></figcaption></a></li>
+		    <li><a href="/perkembangan"><img alt="grafik" <%= image_tag 'chart.png'%>
+		    	<figcaption align="center"><h6>Perkembangan</h6></figcaption></a></li>
+		    <li><a href="/setting"><img alt="setting" <%= image_tag 'setting.png'%>
+		    	<figcaption align="center"><h6>Pengaturan</h6></figcaption></a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+	<hr>
+
+	<div>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint modi ut neque commodi magnam minima esse, quos laudantium molestiae cum, minus excepturi natus, fugiat aperiam error delectus voluptates facere nesciunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis excepturi ratione tenetur dolorem, vero iure velit. Aspernatur, obcaecati corrupti officiis repudiandae, maiores provident, laudantium sit ut aliquid veritatis velit itaque.</p>
+	</div>
+	<div class="clear"></div>
+</div>
+<% else %>
+	<h2>Opps!!</h2>
+	<div class="clear"></div>
+<% end %>

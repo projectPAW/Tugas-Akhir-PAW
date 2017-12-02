@@ -1,0 +1,72 @@
+<div class="container" >
+		<div class="formDaftar">
+			
+			<% flash.each do |type, message| %>
+				<p class="alert alert-success alert-dismissable fade show"><a href="home" style="float: right">back to home</a>
+				<strong>Success!</strong><%=message%></p>
+			<%end%>
+			
+			<h2>Registrasi Siswa</h2><br/>
+
+			<%= form_for(@user, url: {action: "tambah"}, method: "post") do |f| %>
+				<div class="form-group">
+					<%= f.label :No_Induk %>
+					<%= f.number_field :noinduk, class:'form-control', required: true %>
+				</div>
+				<div class="form-group">
+					<%= f.label :Nama %>
+					<%= f.text_field :nama, class:'form-control', required: true %>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :Jenis_Kelamin %>
+					
+					<div class="radio">
+						<%= f.radio_button :jenkel, "laki-laki", required: true %><label style="margin-left: 5px">Laki-laki</label>
+					</div>
+					<div class="radio">
+						<%= f.radio_button :jenkel, "laki-laki", required: true %><label style="margin-left: 5px">Perempuan</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :Kelas %>
+					<%= f.text_field :kelas, class:'form-control',required: true, placeholder:"kelas-subkelas"%>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :Jurusan %>
+					<div class="radio">
+						<%= f.radio_button :jurusan, "IPA", required: true %><label style="margin-left: 5px">IPA</label>
+					</div>
+					<div class="radio">
+						<%= f.radio_button :jurusan, "IPS", required: true %><label style="margin-left: 5px">IPS</label>
+					</div>
+					<div class="radio">
+						<%= f.radio_button :jurusan, "Bahasa", required: true %><label style="margin-left: 5px">Bahasa</label>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<%= f.label :Sekolah %>
+					<%= f.text_field :sekolah, class:'form-control', required: true%>
+				</div>
+				<div class="form-group">
+					<%= f.label :Username %>
+					<%= f.text_field :username, class:'form-control', required: true %>
+				</div>
+				<div class="form-group">
+					<%= f.label :Password %>
+					<%= f.password_field :password, class:'form-control', required: true %>
+				</div>
+
+				<%= f.submit "Simpan", class:'btn btn-primary' %>
+				<%= link_to "Batal", home_path, class:'btn btn-danger' %>
+				
+				<div style="float: right">
+					<%= button_tag "Reset", type: :reset, class:'btn btn-light' %>
+				</div>
+			<% end %>
+
+		</div>
+</div>

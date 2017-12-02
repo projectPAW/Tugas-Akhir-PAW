@@ -1,0 +1,23 @@
+<table>
+	<tr>
+		<td>No Induk</td>
+		<td>Nama</td>
+		<td>Jenis Kelamin</td>
+		<td>Kelas</td>
+		<td>Subkelas</td>
+		<td>Jurusan</td>
+		<td>Sekolah</td>
+	</tr>
+
+	<% @user.each do |f| %>			
+	<tr>
+	<td><%= f.noinduk %></td>
+		<td><%= f.nama %></td>
+		<td><%= f.jenkel %></td>
+		<td><%= f.kelas %></td>
+		<td><%= f.subkelas %></td>
+		<td><%= f.jurusan %></td>
+		<td><%= f.sekolah %></td>
+	</tr>
+	<% end %>
+</table>
