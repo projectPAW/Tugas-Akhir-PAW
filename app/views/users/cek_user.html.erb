@@ -1,0 +1,25 @@
+<div class="container" >
+		<div class="formDaftar">
+			<h2>Reset Password</h2><br/>
+			
+			<%= form_tag do %>
+				<%= label_tag :ID %> <br/>
+				<%= text_field_tag :id, params[:id] %>
+			<% x = params[:id] %>
+			
+			<br/><br/>
+			<%= link_to "Lanjut", reset_password_path(1), class: 'btn btn-primary' %>
+			<%= link_to "Batal", home_path, class:'btn btn-danger' %>
+			<% end %>
+		</div>
+</div>
+
+<!--
+<label>Nama</label></br>
+
+  	<% @users.each do |x| %>
+   	<%= x.nama %></td>
+    
+    <%= link_to "Lanjut", reset_password_path(x), class: 'btn btn-primary' %>
+			<%= link_to "Batal", home_path, class:'btn btn-danger' %>
+<% end %>-->

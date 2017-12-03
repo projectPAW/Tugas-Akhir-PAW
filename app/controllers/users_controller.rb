@@ -19,13 +19,16 @@ class UsersController < ApplicationController
 	end
 	#---------------------------------------------------------------------------------
 
-	def username
+
+	def cek_user
 		#x = params[:id]
-		#@user = User.new
+		@user = User.new
+		@users = User.all
 	end
 
 	def reset_password
-		@users = User.all
+		@cek = "User.all"
+		
 		@user = User.find(params[:id])
 	end
 
