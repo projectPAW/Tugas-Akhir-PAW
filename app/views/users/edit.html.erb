@@ -1,0 +1,7 @@
+<%= form_for(@user, url: {action: "update"}, method: "post") do |d| %>
+	
+	<%= d.text_field :noinduk %>
+	<%= d.text_field :nama %>
+	<%= d.submit "Simpan"%>
+
+<% end %>

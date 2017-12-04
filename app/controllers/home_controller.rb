@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 	
 	layout 'Plogin'
 	
-	def login
+	def index	
 	end
 
 	def masuk

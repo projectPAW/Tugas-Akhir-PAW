@@ -1,0 +1,6 @@
+<% user = current_user %> 
+<% x = user.id %>
+
+<%= link_to "Edit Profile", user_path(x) %>
+<%= link_to "Hapus Akun", user_path(x), method: :delete, data: {confirm: 'Anda yakin untuk menghapus akun?'} %>
+<%= link_to "Back", dashboard_path, class:'btn btn-danger' %>
