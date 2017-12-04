@@ -13,14 +13,18 @@ Rails.application.routes.draw do
   get 'daftar', to:'users#daftar'
   post 'daftar', to:'users#tambah'
   
-  get 'reset_password', to:'users#cek_user'
-  get 'reset_password/:id',to:'users#reset_password'
-  post 'reset_password/:id',to:'users#reset_pw'
+  #get 'reset_password', to:'users#cek_user'
+  #get 'reset_password/:id',to:'users#reset_password'
+  #post 'reset_password/:id',to:'users#reset_pw'
 
   get 'dashboard', to: 'student#dashboard'
   get 'book', to: 'student#book'
   get 'simulasi', to: 'student#simulasi'
   get 'perkembangan', to: 'student#perkembangan'
+  
   get 'setting', to: 'student#setting'
+  get 'edit_data/:id', to: 'users#edit', as: :user #edit data user
+  post 'edit_data/:id', to: 'users#update'
+  delete 'edit_data/:id', to: 'users#delete' #delete user
 
 end

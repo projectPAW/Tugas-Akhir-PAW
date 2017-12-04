@@ -1,8 +1,4 @@
 class UsersController < ApplicationController
-	def index
-		@user = User.all
-	end
-	
 	#---------------------------------------------------------------------------------
 	def daftar
 		@user = User.new
@@ -17,46 +13,32 @@ class UsersController < ApplicationController
 			redirect_to daftar_path
 		end
 	end
-	#---------------------------------------------------------------------------------
-
-
-	def cek_user
-		#x = params[:id]
-		@user = User.new
-		@users = User.all
-	end
-
-	def reset_password
-		@cek = "User.all"
-		
+	#----------------------------------------------------------------------------------
+	def edit #fungsi edit akun
 		@user = User.find(params[:id])
 	end
-
-	def reset_pw
-		@user = User.find(params[:id])
-		
-		if 	@user.update(password: params[:password])
-			render plain: "berhasil"
-			#redirect_to 'login'
-		else 
-			render plain: "gagal"
-			#redirect_to 'reset'
-		end
-	end
-	#---------------------------------------------------------------------------------
 
 	def update
+		@user = User.find(params[:id])
+		if @user.update(user_params)
+			redirect_to setting_path
+		else
+			redirect_to setting_path
+		end
 	end
-
-	def delete	
+	#----------------------------------------------------------------------------------
+	def delete #fungsi delete akun
+		@user = User.find(params[:id])
+		if @user.destroy
+			session[:user_id] = nil
+			redirect_to home_path
+		else
+			redirect_to setting_path
+		end 
 	end
-
+	#----------------------------------------------------------------------------------
 	private
 	def user_params #method menyimpan data
 		params.require(:user).permit(:noinduk, :nama, :jenkel, :kelas, :jurusan, :sekolah, :username, :password)
-	end
-
-	def reset_passw
-		params.require(:user).permit(:password)
 	end
 end
